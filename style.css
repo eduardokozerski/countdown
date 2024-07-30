@@ -1,0 +1,180 @@
+body {
+    background-color: black;
+    overflow: hidden;
+}
+
+.layer {
+    background-color: rgb(71, 71, 71);
+    border-radius: 15px;
+    font-family: "Montserrat";
+    width: 600px;
+    height: 500px;
+    justify-content: center;
+    margin: auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* FIRST CONTENT */
+.about {
+    text-align: center;
+    padding: 50px 0;
+    color: rgb(173, 173, 173);
+    margin: 0 auto;
+}
+
+#tv-icon {
+    filter: invert(73%) sepia(0%) saturate(1397%) hue-rotate(318deg) brightness(98%) contrast(84%);
+}
+
+#line-1 {
+    font-weight: 600;
+    font-size: 1.3em;
+    padding: 5px;
+}
+
+#line-2 {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 0.95em;
+    padding: 5px;
+}
+
+#where-to-watch {
+    font-weight: 500;
+    font-size: 0.95em;
+    padding: 5px;
+}
+
+/* SECOND CONTENT */
+.scoreboard {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 2em;
+}
+
+.scoreboard-items {
+    color: white;
+    font-weight: 600;
+    font-size: 1.3em;
+    margin: 0 16px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+.name-badge-1 {
+    display: flex;
+    align-items: center;
+}
+
+.name-badge-2 {
+    display: flex;
+    align-items: center;
+}
+
+.badge-fla {
+    height: 50px;
+    margin-left: 12px;
+}
+
+.badge-pal {
+    height: 50px;
+    margin-right: 12px;
+}
+
+
+.result {
+    display: flex;
+}
+
+.result-number {
+    font-size: 45px;
+    font-weight: 600;
+    color: rgb(94, 94, 94);
+    
+}
+
+.result-separator {
+    font-size: 28px;
+    font-weight: 700;
+    color: rgb(94, 94, 94);
+    margin: 0 8px;
+    vertical-align: middle;
+    line-height: 54.81px;
+}
+
+/* THIRD CONTENT */
+.until {
+    margin: 25px;
+    max-width: 500px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1em;
+    padding: 1em;
+    background: #2b2b2b;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0.3);
+    color: white;
+    font-family: "Montserrat";
+    justify-content: center;
+}
+
+.until__component {
+    text-align: center;
+    background: rgb(71, 71, 71);
+    border-radius: 5px;
+
+}
+
+.until__numeric {
+    color: rgb(255, 255, 255);
+    padding: 0.5em 0;
+    font-size: 2em;
+    font-weight: 600;
+}
+
+.until__unit {
+    font-size: 0.8em;
+    padding-bottom: 1em;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+}
+
+@media (max-width: 600px ) {
+    .layer {
+        width: 360px;
+        height: 720px;
+    }
+    .scoreboard {
+        flex-wrap: wrap;
+    }
+
+    .name-badge-1 {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+    .name-badge-2 {
+        width: 100%;
+        display: flex;
+        flex-direction: row-reverse;        
+        
+    }
+
+    .badge-pal {
+        margin-left: 12px;
+        margin-right: 0px;
+    }
+
+    .result {
+        width: 100%;
+        padding: 0 50%;
+    }
+    .until {
+        grid-template-columns: repeat(2, 1fr);
+    }    
+}

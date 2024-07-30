@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Contagem Regressiva</title>
+    <link rel="icon" href="resources/timer.svg">
+
+    <!-- MONTSERRAT FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+</head>
+<body style="background-color: black;">
+    <div class="layer">
+        <!-- FIRST CONTENT -->
+        <div class="about">
+            <div id="line-1">Copa do Brasil • 31.07 • 20:00</div>
+            <div id="line-2">Oitavas • Ida • Maracanã</div>
+            <div id="where-to-watch">
+                <img id="tv-icon" src="resources/tv.svg" alt="TV Icon">
+                <span>Prime Video</span>
+            </div>
+        </div>
+        <!-- SECOND CONTENT -->
+        <div class="scoreboard">
+            <div class="scoreboard-items">
+                <div class="name-badge-1">
+                    <span class="name-fla">Flamengo</span>
+                    <img class="badge-fla" src="resources/flamengo.svg" alt="Flamengo Icon">
+                </div>
+            </div>
+            <div class="result">
+                <span class="result-number">0</span>
+                <span class="result-separator">:</span>
+                <span class="result-number">0</span>
+            </div>
+            <div class="scoreboard-items">
+                <div class="name-badge-2">
+                    <img class="badge-pal" src="resources/palmeiras.svg" alt="Palmeiras Icon">
+                    <span>Palmeiras</span>  
+                </div>
+
+            </div>
+        </div>
+        <!-- COUNTDOWN -->
+        <div class="until">
+            <div class="until__component">
+                <div class="until__numeric until__numeric--days" id="days">00</div>
+                <div class="until__unit">Dias</div>
+            </div>
+            <div class="until__component">
+                <div class="until__numeric until__numeric--hours" id="hours">00</div>
+                <div class="until__unit">Horas</div>
+            </div>
+            <div class="until__component">
+                <div class="until__numeric until__numeric--minutes" id="minutes">00</div>
+                <div class="until__unit">Minutos</div>
+            </div>
+            <div class="until__component">
+                <div class="until__numeric until__numeric--seconds" id="seconds">00</div>
+                <div class="until__unit">Segundos</div>
+            </div>
+            <!-- <div class="until__event">Até 31 de julho</div> -->
+        </div>
+    </div>
+    <script>
+        var countDownDate = new Date("Jul 31, 2024 20:00:00").getTime();
+        var x = setInterval(function(){
+            var now = new Date().getTime();
+            var distance = countDownDate - now;
+
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("days").innerHTML = days;
+            document.getElementById("hours").innerHTML = hours;
+            document.getElementById("minutes").innerHTML = minutes;
+            document.getElementById("seconds").innerHTML = seconds;
+            
+        }, 1000);
+
+
+    </script>
+</body>
+</html>
