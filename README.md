@@ -1,1 +1,1 @@
-# countdown
+A simple countdown page.
